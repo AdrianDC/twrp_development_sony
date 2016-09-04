@@ -1,0 +1,22 @@
+# mount point    fstype    device               device2		                           flags
+
+/system          ext4      /dev/block/bootdevice/by-name/system                        flags=display="System";
+/cache           ext4      /dev/block/bootdevice/by-name/cache
+/data            ext4      /dev/block/bootdevice/by-name/userdata                      flags=encryptable=footer;length=-16384;retainlayoutversion;
+/boot            emmc      /dev/block/bootdevice/by-name/boot                          flags=backup=1;display="Kernel";
+/recovery        emmc      /dev/block/bootdevice/by-name/FOTAKernel                    flags=backup=1;display="FOTAKernel";
+/firmware        vfat      /dev/block/bootdevice/by-name/modem                         flags=display="Firmware";mounttodecrypt;fsflags=ro,context=u:object_r:firmware_file:s0;
+/persist         ext4      /dev/block/bootdevice/by-name/persist
+
+/dsp             ext4      /dev/block/bootdevice/by-name/dsp
+/idd             ext4      /dev/block/bootdevice/by-name/diag                          flags=display="Diag";backup=1;
+/keymaster       emmc      /dev/block/bootdevice/by-name/keymaster
+/modem_fs1       emmc      /dev/block/bootdevice/by-name/modemst1                      flags=display="modem_fs1 (Baseband)";backup=1;mounttodecrypt;subpartitionof=/boot;
+/modem_fs2       emmc      /dev/block/bootdevice/by-name/modemst2                      flags=display="modem_fs2 (Baseband)";backup=1;mounttodecrypt;subpartitionof=/boot;
+#/rca            ext4      /dev/block/bootdevice/by-name/apps_log                      flags=display="AppsLog";backup=1;usermrf;
+/oem             ext4      /dev/block/bootdevice/by-name/oem                           flags=display="OEM";backup=1;
+/qns             ext4      /dev/block/bootdevice/by-name/Qnovo                         flags=display="Qnovo";backup=1;
+/ta              emmc      /dev/block/bootdevice/by-name/TA                            flags=backup=1;display="TA (Trim-Area)";
+
+/sdcard1         vfat      /dev/block/mmcblk1p1                                        flags=display="Micro SDcard";storage;wipeingui;removable;
+/usbdisk         auto      /dev/block/sda1       /dev/block/sda                        flags=display="USB OTG";storage;wipeingui;removable;
