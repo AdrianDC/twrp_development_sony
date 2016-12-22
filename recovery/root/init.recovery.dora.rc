@@ -32,6 +32,8 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
+    # start clearpad_post_probe when filesystem is available for fwflash
+    write /sys/devices/virtual/input/clearpad/post_probe_start 1
     write /sys/kernel/debug/clearpad/hwtest "XP"
 
     wait /dev/block/bootdevice/by-name/persist
