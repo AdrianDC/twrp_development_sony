@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project: 'https://github.com/AdrianDC/twrp_development_sony' -->
+<!-- Manifest: 'git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git' -->
+<!-- Branch: 'twrp-6.0' -->
+<!-- Untracked: '' -->
+<manifest>
+
+  <project name="TeamWin/android_device_sony_huashan" path="device/sony/huashan" remote="github" revision="android-6.0" />
+
+  <project name="TeamWin/android_device_sony_hayabusa" path="device/sony/hayabusa" remote="github" revision="android-6.0" />
+  <project name="TeamWin/android_device_sony_mint" path="device/sony/mint" remote="github" revision="android-6.0" />
+  <project name="TeamWin/android_device_sony_tsubasa" path="device/sony/tsubasa" remote="github" revision="android-6.0" />
+
+  <project name="AdrianDC/android_device_sony_dora" path="device/sony/dora" remote="github" revision="android-9.0" />
+  <project name="AdrianDC/android_device_sony_kagura" path="device/sony/kagura" remote="github" revision="android-9.0" />
+
+</manifest>
