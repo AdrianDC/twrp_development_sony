@@ -15,10 +15,10 @@
 #
 
 # Board device path
-DEVICE_PATH := device/sony/dora
+DEVICE_PATH := device/sony/kagura
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := F8131
+TARGET_BOOTLOADER_BOARD_NAME := F8331
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8996
@@ -70,7 +70,7 @@ BOARD_KERNEL_CMDLINE += user_debug=31 androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x3F ehci-hcd.park=3
 BOARD_KERNEL_CMDLINE += dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_KERNEL_CMDLINE += coherent_pool=8M
-BOARD_KERNEL_CMDLINE += androidboot.hardware=dora
+BOARD_KERNEL_CMDLINE += androidboot.hardware=kagura
 BOARD_KERNEL_CMDLINE += enforcing=0
 
 # Partitions

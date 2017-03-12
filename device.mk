@@ -21,15 +21,14 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Ramdisk fstab files
 PRODUCT_COPY_FILES += \
-    device/sony/dora/rootdir/fstab.qcom:root/fstab.dora \
-    device/sony/dora/rootdir/fstab.qcom:root/fstab.qcom \
-    device/sony/dora/rootdir/fstab.qcom:root/fstab.tone
+    device/sony/kagura/rootdir/fstab.qcom:root/fstab.kagura \
+    device/sony/kagura/rootdir/fstab.qcom:root/fstab.qcom \
+    device/sony/kagura/rootdir/fstab.qcom:root/fstab.tone
 
 # Ramdisk firmware files
 PRODUCT_COPY_FILES += \
-    device/sony/dora/rootdir/lib/firmware/emmc/90-484247346132-a5.bin:root/lib/firmware/emmc/90-484247346132-a5.bin \
-    device/sony/dora/rootdir/lib/firmware/emmc/90-484347346132-a5.bin:root/lib/firmware/emmc/90-484347346132-a5.bin \
-    device/sony/dora/rootdir/lib/firmware/emmc/catalog.txt:root/lib/firmware/emmc/catalog.txt
+    device/sony/kagura/rootdir/lib/firmware/emmc/15-424A4E423452-0f.bin:root/lib/firmware/emmc/15-424A4E423452-0f.bin \
+    device/sony/kagura/rootdir/lib/firmware/emmc/catalog.txt:root/lib/firmware/emmc/catalog.txt
 
 # Time Zone data for recovery
 PRODUCT_COPY_FILES += \
@@ -41,4 +40,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 # USB properties
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.usb.pid_suffix=1D9
+    ro.usb.pid_suffix=1E7

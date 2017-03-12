@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_dora-userdebug
-add_lunch_combo omni_dora-eng
+add_lunch_combo omni_kagura-userdebug
+add_lunch_combo omni_kagura-eng
