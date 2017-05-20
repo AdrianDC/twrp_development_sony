@@ -32,10 +32,6 @@ on fs
     chmod 0664 /dev/ion
     chown system system /dev/ion
 
-    # start clearpad_post_probe when filesystem is available for fwflash
-    write /sys/devices/virtual/input/clearpad/post_probe_start 1
-    write /sys/kernel/debug/clearpad/hwtest "XP"
-
     wait /dev/block/bootdevice/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
     restorecon_recursive /persist
@@ -50,6 +46,11 @@ on fs
     symlink /firmware/image /vendor/firmware
 
     # start pulldecryptfiles
+
+on post-fs
+    # start clearpad_post_probe when filesystem is available for fwflash
+    write /sys/devices/virtual/input/clearpad/post_probe_start 1
+    write /sys/kernel/debug/clearpad/hwtest "XP"
 
 on property:ro.crypto.state=encrypted
     stop sbinqseecomd
