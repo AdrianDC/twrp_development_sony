@@ -14,8 +14,14 @@
 # limitations under the License.
 #
 
-# Inherit device configurations
-$(call inherit-product, device/sony/kagura/device.mk)
+# Inherit AOSP configurations
+$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := kagura
 
 # Device identification
 PRODUCT_DEVICE := kagura
@@ -24,6 +30,3 @@ PRODUCT_RELEASE_NAME := kagura
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := F8331
-
-# Prebuilt kernel
-LOCAL_KERNEL := device/sony/kagura/prebuilts/kernel
