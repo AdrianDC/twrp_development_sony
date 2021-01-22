@@ -14,8 +14,14 @@
 # limitations under the License.
 #
 
-# Inherit device configurations
-$(call inherit-product, device/sony/dora/device.mk)
+# Inherit AOSP configurations
+$(call inherit-product, build/target/product/embedded.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common.mk)
+
+# Release name
+PRODUCT_RELEASE_NAME := dora
 
 # Device identification
 PRODUCT_DEVICE := dora
@@ -23,7 +29,4 @@ PRODUCT_NAME := omni_dora
 PRODUCT_RELEASE_NAME := dora
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_MODEL := F8131
-
-# Prebuilt kernel
-LOCAL_KERNEL := device/sony/dora/prebuilts/kernel
+PRODUCT_MODEL := F8331
